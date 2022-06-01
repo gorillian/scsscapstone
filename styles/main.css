@@ -18,15 +18,18 @@ button {
 
 .homepage-wrapper {
   font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-color: #888888;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .homepage-wrapper .natureshot {
   color: white;
   height: 100%;
-  width: 100vw;
-  background-color: darkslategrey;
+  width: 100%;
   opacity: 90%;
-  z-index: 0;
+  z-index: -1;
 }
 
 .homepage-wrapper .natureshot .header {
@@ -98,7 +101,14 @@ button {
 }
 
 .homepage-wrapper .features-row .whitesection {
-  background-color: lightblue;
+  text-align: center;
+  z-index: 3;
+  margin: 0 20px;
+  margin-top: -20px;
+  border-radius: 10px 10px 0 0;
+  background-color: white;
+  padding-top: 50px;
+  height: 1fr;
 }
 
 .homepage-wrapper .features-row .whitesection .iconcolumns {
@@ -116,6 +126,32 @@ button {
           align-items: center;
   font-size: 12px;
   height: 200px;
-  background-color: red;
+  text-align: center;
+}
+
+.homepage-wrapper .features-row .pagebuilder {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 800px;
+}
+
+.homepage-wrapper .features-row .pagebuilder .pagebuilder-title {
+  font-size: 35px;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.homepage-wrapper .features-row .pagebuilder .videoclip {
+  background-image: url(https://i.ytimg.com/vi_webp/twgL6jnx5II/maxresdefault.webp);
+  height: 400px;
+  width: 600px;
+  background-position: center;
 }
 /*# sourceMappingURL=main.css.map */
