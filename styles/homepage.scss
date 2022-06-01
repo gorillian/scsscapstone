@@ -1,3 +1,5 @@
+$black: #3c4858;
+$gray: #999;
 .body {
   display: flex;
   align-items: center;
@@ -10,10 +12,16 @@ button {
   border: none;
   border-radius: 50px;
 }
+h1 {
+  color: $black;
+}
+h4 {
+  color: $black;
+}
 .homepage-wrapper {
   font-family: "Roboto", sans-serif;
   text-align: center;
-  background-color: #888888;
+  background-color: white;
   background-repeat: no-repeat;
   background-size: 100% auto;
   .natureshot {
@@ -68,6 +76,7 @@ button {
       margin-top: -20px;
       border-radius: 10px 10px 0 0;
       background-color: white;
+      color: $gray;
       padding-top: 50px;
       height: 1fr;
       .iconcolumns {
@@ -90,9 +99,12 @@ button {
       background-color: rgba(0, 0, 0, 0.7);
       color: white;
       display: flex;
+      flex-direction: row;
       justify-content: space-around;
       align-items: center;
       height: 800px;
+      margin: 0 20px;
+      padding: 0 20px;
       .pagebuilder-title {
         font-size: 35px;
         font-family: "Roboto Slab", sans-serif;
@@ -102,6 +114,20 @@ button {
         height: 400px;
         width: 600px;
         background-position: center;
+      }
+    }
+    .products {
+      background-color: #f0f0f0;
+      margin: 0 20px;
+      padding: 0 20px;
+      .prod-description {
+        h1 {
+          margin: 0;
+        }
+      }
+      .prod-pieces {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
       }
     }
   }
