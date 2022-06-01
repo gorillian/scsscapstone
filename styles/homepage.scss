@@ -1,11 +1,46 @@
 .body {
   display: flex;
   align-items: center;
-  font-family: "Roboto";
-  color: aquamarine;
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.homepage-wrapper {
+  font-family: "Roboto", sans-serif;
+  .natureshot {
+    color: white;
+    height: 100%;
+    width: 100vw;
+    background-color: darkslategrey;
+    opacity: 90%;
+    z-index: 0;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+      padding-top: 12px;
+      color: white;
+      .left-side {
+        display: flex;
+        justify-content: center;
+        width: 30vw;
+      }
+      .right-side {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 40vw;
+        font-size: 12px;
+        padding-right: 200px;
+      }
+    }
+    .landing-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .landing-title {
+        font-size: 70px;
+      }
+    }
   }
 }
