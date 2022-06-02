@@ -1,5 +1,10 @@
 $black: #3c4858;
 $gray: #999;
+
+@mixin sectionformat {
+  margin: 0 20px;
+}
+
 .body {
   display: flex;
   align-items: center;
@@ -13,20 +18,24 @@ button {
   border-radius: 50px;
 }
 h1 {
+  margin: 0;
   color: $black;
 }
 h4 {
   color: $black;
 }
+p {
+  margin: 0;
+}
 .homepage-wrapper {
   font-family: "Roboto", sans-serif;
   text-align: center;
-  background-color: white;
+  background-color: #e2e2e2;
   background-repeat: no-repeat;
   background-size: 100% auto;
   .natureshot {
     color: white;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     opacity: 90%;
     z-index: -1;
@@ -72,27 +81,45 @@ h4 {
     .whitesection {
       text-align: center;
       z-index: 3;
-      margin: 0 20px;
-      margin-top: -20px;
+      @include sectionformat;
+      margin-top: -60px;
       border-radius: 10px 10px 0 0;
       background-color: white;
       color: $gray;
       padding-top: 50px;
-      height: 1fr;
+      height: 70vh;
+      h5 {
+        font-size: 18px;
+        font-weight: 200;
+        color: $gray;
+        padding: 0 300px;
+      }
       .iconcolumns {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        font-size: 12px;
+        // font-size: 12px;
         height: 200px;
         text-align: center;
-        // .red-icon-column {
-        // }
-        // .blue-icon-column {
-        // }
-        // .pink-icon-column {
-        // }
+        .red-icon-column {
+          i {
+            color: red;
+            height: inherit;
+          }
+        }
+        .blue-icon-column {
+          i {
+            color: blue;
+            height: inherit;
+          }
+        }
+        .pink-icon-column {
+          i {
+            color: pink;
+            height: inherit;
+          }
+        }
       }
     }
     .pagebuilder {
@@ -102,9 +129,9 @@ h4 {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      height: 800px;
-      margin: 0 20px;
+      height: 140vh;
       padding: 0 20px;
+      @include sectionformat;
       .pagebuilder-title {
         font-size: 35px;
         font-family: "Roboto Slab", sans-serif;
@@ -120,6 +147,7 @@ h4 {
       background-color: #f0f0f0;
       margin: 0 20px;
       padding: 0 20px;
+      height: 120vh;
       .prod-description {
         h1 {
           margin: 0;
@@ -129,6 +157,73 @@ h4 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
+    }
+  }
+  .ourteam-row {
+    @include sectionformat;
+    background-color: white;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .the-team {
+      display: grid;
+      grid-template-columns: 50vw 50vw;
+      grid-template-rows: 30vh 30vh;
+    }
+  }
+  .testimonials-row {
+    @include sectionformat;
+    background-color: white;
+    height: 80vh;
+    .clients {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .subscribe-row {
+    height: 50vh;
+    color: white;
+  }
+  .blog-row {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .blog-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 2fr 4fr 3fr;
+      grid-row-start: 2;
+      grid-column: span 1;
+    }
+  }
+  .contact-row {
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+  .last-row {
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer-row {
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .leftside-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .rightside-footer {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
