@@ -5,6 +5,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0;
 }
 
 button {
@@ -35,6 +36,7 @@ p {
   background-color: #e2e2e2;
   background-repeat: no-repeat;
   background-size: 100% auto;
+  margin: 0;
 }
 
 .homepage-wrapper .natureshot {
@@ -201,6 +203,18 @@ p {
   margin: 0 20px;
   padding: 0 20px;
   height: 120vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .homepage-wrapper .features-row .products .prod-description h1 {

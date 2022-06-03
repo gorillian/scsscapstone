@@ -8,6 +8,7 @@ $gray: #999;
 .body {
   display: flex;
   align-items: center;
+  margin: 0;
 }
 button {
   background-color: #e91e63;
@@ -33,6 +34,7 @@ p {
   background-color: #e2e2e2;
   background-repeat: no-repeat;
   background-size: 100% auto;
+  margin: 0;
   .natureshot {
     color: white;
     height: 100vh;
@@ -148,6 +150,10 @@ p {
       margin: 0 20px;
       padding: 0 20px;
       height: 120vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
       .prod-description {
         h1 {
           margin: 0;
