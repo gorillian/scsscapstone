@@ -3,6 +3,9 @@ $gray: #999;
 
 @mixin sectionformat {
   margin: 0 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: #999;
 }
 
 .body {
@@ -28,6 +31,13 @@ h4 {
 p {
   margin: 0;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: $gray;
+}
 .homepage-wrapper {
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -36,11 +46,17 @@ p {
   background-size: 100% auto;
   margin: 0;
   .natureshot {
+    text-align: center;
+
     color: white;
-    height: 100vh;
+    gap: 5px;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../images/mountain.jpeg);
+    background-size: cover;
+    background-position: 25% 60%;
     width: 100%;
-    opacity: 90%;
-    z-index: -1;
+    height: 80%;
     .header {
       display: flex;
       justify-content: space-between;
@@ -53,13 +69,13 @@ p {
         justify-content: center;
         font-size: 18px;
         font-weight: 300;
-        width: 30vw;
+        width: 40vw;
       }
       .right-side {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 40vw;
+        width: 20vw;
         font-size: 12px;
         padding-right: 200px;
       }
@@ -69,13 +85,15 @@ p {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 250px;
+      margin-top: 150px;
       .landing-title {
         font-size: 70px;
         font-weight: 800;
+        margin-bottom: 40px;
       }
       button {
         border-radius: 5px;
+        margin-top: 40px;
       }
     }
   }
@@ -91,7 +109,7 @@ p {
       padding-top: 50px;
       height: 70vh;
       h5 {
-        font-size: 18px;
+        font-size: 40px;
         font-weight: 200;
         color: $gray;
         padding: 0 300px;
@@ -101,121 +119,152 @@ p {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        // font-size: 12px;
+        font-size: 16px;
         height: 200px;
         text-align: center;
+        h4 {
+          font-size: 18px;
+        }
         .red-icon-column {
+          width: 25vw;
           i {
-            color: red;
+            color: #e91e63;
             height: inherit;
+            font-size: 80px;
           }
         }
         .blue-icon-column {
+          width: 25vw;
           i {
-            color: blue;
+            color: rgb(0, 166, 255);
             height: inherit;
+            font-size: 80px;
           }
         }
-        .pink-icon-column {
+        .green-icon-column {
+          width: 25vw;
           i {
-            color: pink;
+            color: rgb(59, 184, 59);
             height: inherit;
+            font-size: 80px;
           }
         }
       }
     }
-    .pagebuilder {
-      background-color: rgba(0, 0, 0, 0.7);
+  }
+  .about-row {
+    @include sectionformat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(https://wp-themes.com/wp-content/themes/hestia/assets/img/contact.jpg);
+    color: white;
+    height: 50vh;
+    padding: 0 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    h1 {
       color: white;
+    }
+    .columns {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      height: 140vh;
-      padding: 0 20px;
-      @include sectionformat;
-      .pagebuilder-title {
-        font-size: 35px;
-        font-family: "Roboto Slab", sans-serif;
+      width: 80vw;
+      .leftcolumn {
+        width: 30vw;
       }
-      .videoclip {
-        background-image: url(https://i.ytimg.com/vi_webp/twgL6jnx5II/maxresdefault.webp);
-        height: 400px;
-        width: 600px;
-        background-position: center;
-      }
-    }
-    .products {
-      background-color: #f0f0f0;
-      margin: 0 20px;
-      padding: 0 20px;
-      height: 120vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      .prod-description {
-        h1 {
-          margin: 0;
+      .rightcolumn {
+        width: 20vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 150px;
         }
       }
-      .prod-pieces {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-      }
     }
-  }
-  .ourteam-row {
-    @include sectionformat;
-    background-color: white;
-    height: 120vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    .the-team {
-      display: grid;
-      grid-template-columns: 50vw 50vw;
-      grid-template-rows: 30vh 30vh;
-    }
-  }
-  .testimonials-row {
-    @include sectionformat;
-    background-color: white;
-    height: 80vh;
-    .clients {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
-  .subscribe-row {
-    height: 50vh;
-    color: white;
   }
   .blog-row {
-    height: 100vh;
+    @include sectionformat;
+    background-color: white;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 30px;
+    text-align: left;
+    h1 {
+      padding-bottom: 30px;
+    }
     .blog-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 2fr 4fr 3fr;
-      grid-row-start: 2;
-      grid-column: span 1;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      p {
+        font-weight: 200;
+        font-size: 14px;
+        color: $gray;
+      }
+      .blogpurp {
+        width: 25vw;
+        h5 {
+          color: purple;
+        }
+      }
+      .blogblue {
+        width: 25vw;
+        h5 {
+          color: blue;
+        }
+      }
+      .blogred {
+        width: 25vw;
+        padding-left: 40px;
+        h5 {
+          color: palevioletred;
+        }
+      }
     }
   }
-  .contact-row {
-    height: 90vh;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-  }
   .last-row {
-    height: 40vh;
+    @include sectionformat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(https://wp-themes.com/wp-content/themes/hestia/assets/img/contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    color: white;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    text-align: left;
+    .pieces {
+      padding-left: 100px;
+    }
+    h1 {
+      color: white;
+    }
+    h4 {
+      color: white;
+    }
+    .format1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 27vw;
+      i {
+        font-size: 40px;
+        align-self: flex-start;
+      }
+    }
   }
   .footer-row {
     height: 15vh;
